@@ -1,14 +1,33 @@
 import React, {Component} from "react";
+import firebase from "../../firebase";
+import { Router, globalHistory } from "@reach/router";
 import NavBar from "../../components/NavBar";
 import Dashboard from "../../components/Dashboard"
 
 class PrivateRoutes extends Component {
+
+  state = {}
+
+  checkAuthorization = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (!user) {
+        globalHistory.navigate("login");
+      }
+    });
+  }
  
+  componentDidMount() {
+    this.checkAuthorization();
+  }
+
   render() {
+    const {user} = this.props;
     return (
       <>
-        <NavBar/>
-        <Dashboard/>
+        <NavBar signOut={this.props.signOut} />
+        <Router> 
+        <Dashboard default path="dashboard" user={user}/>
+        </Router>
       </>
     );
  }

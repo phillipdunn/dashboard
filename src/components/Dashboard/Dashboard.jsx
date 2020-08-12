@@ -5,9 +5,10 @@ class Dashboard extends Component {
   state = {  }
   render() { 
    
-    return ( <>
-      <p>Dashboard works</p>
-      </>  );
+    return ( 
+      <section className={styles.dashboard}>
+        <p>Dashboard works</p>
+      </section>  );
   }
 }
  

@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.inputBox {
+    padding: 10px 5px;
+    border-top: none;
+    border-left: none;
+    border-right:none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color:white;
+    width: 300px;
+    outline: none;
+    font-weight: bold;
+}
