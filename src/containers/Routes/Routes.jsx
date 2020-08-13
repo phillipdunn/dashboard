@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Router } from '@reach/router';
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import LogIn from "../../components/LogIn";
+import SignUp from "../../components/SignUp/SignUp";
 
 class Routes extends Component {
 
@@ -23,6 +24,7 @@ class Routes extends Component {
               signOut={signOut}
             />
           } 
+          <SignUp default path="signup"/>
         </Router>
       </>
     );
