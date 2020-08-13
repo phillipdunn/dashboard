@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.button{
+    background-color: $yellow;
+    color:black;
+    outline: none;
+    border: 2px solid $yellow;
+    border-radius: 30px;
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+    box-shadow:0 4px 7px rgba(0, 0, 0, 0.2), 0 4px 7px rgba(0, 0, 0, 0.27); 
+}
+
+input::-webkit-input-placeholder {
+    color: transparent; 
+    opacity: 0.5;
+    border-radius: 30px;
+}

@@ -1,8 +1,9 @@
 
-$main-font: "Poppins", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
-"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$main-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-$main-yellow: f2b423;
+
+$yellow: rgb(245, 229, 84);
+$white: #F7F6F6;
 
   @mixin background {
     background-color: white;
