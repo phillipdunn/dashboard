@@ -21,7 +21,7 @@
     box-shadow:0 4px 7px rgba(0, 0, 0, 0.2), 0 4px 7px rgba(0, 0, 0, 0.27); 
     
         &:hover {
-            background-color: rgb(91, 89, 89);
+            background-color: $hover;
         }
 }
 

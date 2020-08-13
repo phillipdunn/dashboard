@@ -24,7 +24,7 @@ class Routes extends Component {
               signOut={signOut}
             />
           } 
-          <SignUp default path="signup"/>
+          <SignUp path="signup"/>
         </Router>
       </>
     );

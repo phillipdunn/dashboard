@@ -6,28 +6,17 @@ import firebase, { firestore } from "../../firebase";
 
 class SignUp extends Component {
   state = { 
-    ID: '',
-    // UID: '',
+    ID: '',   
     name: '',
     email: '',
     password: '', 
-    img: '',
+    checkPassword: '',
+    img: ''
    }
 
    inputHandler = (event) => {
     event.preventDefault();
     this.createUser(this.state)
-  }
-
-  addNewUser = (info) => {
-    firestore
-    .collection("info")
-    .doc(info.ID)
-    .set(info)
-    .then(() => {
-      this.props.getUsers();
-    })
-    .catch((err) => console.error(err));
   }
 
   createUser = (info) => {
@@ -36,7 +25,6 @@ class SignUp extends Component {
       .createUserWithEmailAndPassword(info.email, info.password)
       .then(data => {
         this.setState({ID: data.user.uid})
-        this.addNewUser(this.state)
       })
       .catch((error) => {
         console.log(error)
@@ -48,7 +36,7 @@ class SignUp extends Component {
         <>
       <section className={styles.signUpPage}>
         <h1>Sign Up</h1>
-        <form className={styles.signUpForm} onSubmit={this.handleSubmit}>
+        <form className={styles.signUpForm} onSubmit={this.inputHandler}>
           <div className={styles.inputLine}>
             <InputBox id="name" type="text" placeholder="Name" name="name"
               onChange={(e) => this.setState({ name: e.target.value })} />
@@ -63,15 +51,18 @@ class SignUp extends Component {
           </div>
           <div className={styles.inputLine}>
             <InputBox id="password" type="password" name="password" placeholder="Confirm Password"
-              inputHandler={(e) => this.setState({ password: e.target.value })} />
+              inputHandler={(e) => this.setState({ checkPassword: e.target.value })} />
           </div>
           <div >
               <input className={styles.inputImage} type="text" placeholder="URL" onInput={(e) => this.setState({ img: e.target.value })} />
             </div>
+            <div>
+            <Button text="Register"/>
+            <button type="button" text={"Cancel"} onClick={this.props.toggleAddUser} className={styles.cancelBtn}>Cancel</button>
+        </div>
         </form>
-        <div>
-        <Button text="Register"/></div>
-        <button type="button" text={"Cancel"} onClick={this.props.toggleAddUser} className={styles.cancelBtn}>Cancel</button>
+        
+       
       </section>
       </>
     );

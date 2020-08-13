@@ -6,35 +6,7 @@ import InputBox from "../../utilities/InputBox";
 import Button from "../../utilities/Button";
 
 class LogIn extends Component {
-  state = { 
-    users: []
-   }
-
-  // componentDidMount() {
-  //   this.getUsers();
-  //     firestore
-  //       .collection('info')
-  //       .where("ID", "==", this.props.user.uid )
-  //       .get()
-  //       .then(snapshot => {
-  //         snapshot.docs
-  //           .forEach(doc => {
-  //           this.setState({userInfo: doc.data()})
-  //           })
-  //       })   
-  //       .catch(err => console.log(err))
-  // }
   
-  getUsers = () => {
-    firestore
-      .collection('info')
-      .get()
-      .then((snapshot) => {
-        const users = snapshot.docs
-          .map((doc => doc.data()))
-        this.setState({ users })
-      })
-  }
   render() { 
     const { userSignInAttempt, setEmail, setPassword } = this.props;
     return ( 
@@ -50,16 +22,15 @@ class LogIn extends Component {
             <InputBox id="password" type="password" name="password" placeholder="Password"
               inputHandler={setPassword} autoComplete={"current-password"} />
           </div>
+          <div className={styles.buttonWrap}>
+            <Button text="Login"/>
+          </div>
         </form>
-        <div className={styles.buttonWrap}/>
-        <Button text="Login"/>
-        <p>New to dashboards? <Link to="/signup" className={styles.signUp}>Sign up</Link></p>
+        <p>New to dashboards? <Link to="signup" className={styles.signUp}>Sign up</Link></p>
       </section>
       </>
      );
   }
 }
-
-//getUsers={this.getUsers}
  
 export default LogIn;

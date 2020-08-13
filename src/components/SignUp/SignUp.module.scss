@@ -18,6 +18,17 @@
     color: $white;
     background-color: $white;
 
+    .inputLine {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+       
+        ::placeholder{
+        color: $white;
+        font-size: 30px;
+        opacity:0.9;}
+    }
+
     h1 {
         font-size: 80px;
         margin-top: 25px;
