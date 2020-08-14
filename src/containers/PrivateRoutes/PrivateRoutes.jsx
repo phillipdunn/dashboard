@@ -3,6 +3,7 @@ import firebase from "../../firebase";
 import { Router, globalHistory } from "@reach/router";
 import NavBar from "../../components/NavBar";
 import Dashboard from "../../components/Dashboard"
+import PhotoPage from "../../components/PhotoPage/PhotoPage";
 
 class PrivateRoutes extends Component {
 
@@ -24,8 +25,10 @@ class PrivateRoutes extends Component {
     const {user, signOut} = this.props;
     return (
       <>
+        <NavBar signOut={signOut}/>
         <Router> 
-          <Dashboard default path="dashboard" user={user} signOut={signOut}/>
+          <Dashboard default path="dashboard" user={user}/>
+          <PhotoPage path="photopage" user={user}/>
         </Router>
       </>
     );

@@ -9,7 +9,7 @@ class Clothes extends Component {
     return (
       <section className={styles.thumbNail}>
       <div className={styles.titleBar}>
-        <h2>{title}</h2>    
+        <div className={styles.title}>{title}</div>    
       </div>
     </section> 
       );

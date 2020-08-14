@@ -44,7 +44,7 @@ class Weather extends Component {
     return ( 
     <>
       <div className={styles.titleBar}>
-        <h2>{title}</h2>
+        <p className={styles.title}>{title}</p>
       </div>
       <section className={styles.thumbNail}>
         {this.weatherIcon()}   

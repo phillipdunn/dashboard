@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.fileInputBox {
+    margin-top: 80px;
+    margin-left: 40px;
+    border: 2px solid $yellow;
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
