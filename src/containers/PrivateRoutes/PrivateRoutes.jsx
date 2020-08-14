@@ -24,9 +24,8 @@ class PrivateRoutes extends Component {
     const {user, signOut} = this.props;
     return (
       <>
-        <NavBar signOut={this.props.signOut} />
         <Router> 
-        <Dashboard default path="dashboard" user={user} signOut={signOut}/>
+          <Dashboard default path="dashboard" user={user} signOut={signOut}/>
         </Router>
       </>
     );

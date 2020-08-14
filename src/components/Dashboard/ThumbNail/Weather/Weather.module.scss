@@ -1,0 +1,39 @@
+@import "../../../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.titleBar{
+    background-color: $yellow;
+    height:40px;
+    h2 {
+        color:black;
+    }
+}
+
+.thumbNail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.icon{
+    margin-top: 10px;
+    margin-right:25px;
+    margin-left: 15px;
+}
+.temp{
+    margin-top: 40px;
+    margin-left: 5px;
+    color: black;
+    font-size: 30px;;
+}
+
+.location {
+    color: black;
+    font-size: 30px;
+}

@@ -14,10 +14,17 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    height: max-content;
+    width: 100%;
     color: $white;
     background-color: $white;
+
+    h1 {
+        font-size: 100px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
 
     .inputLine {
         display: flex;
@@ -28,12 +35,6 @@
         color: $white;
         font-size: 30px;
         opacity:0.9;}
-    }
-
-    h1 {
-        font-size: 100px;
-        margin-top: 60px;
-        margin-bottom: 60px;
     }
 
     p {

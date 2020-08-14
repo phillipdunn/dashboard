@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.navBar {
+    background-color: $yellow;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 3px 3px #222222e6, 0 1px 1px #222222e6; ;
+    z-index: 8;
+    overflow: hidden;
+    position: fixed;
+
+    .signOut{
+        border-radius: 10px;
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+        font-weight: bold;
+
+        &:hover {
+            background-color: $hover;
+        }
+    }
+}

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import styles from "./SignUp.module.scss";
 import Button from "../../utilities/Button";
 import InputBox from "../../utilities/InputBox";
-import firebase, { firestore } from "../../firebase";
+import firebase from "../../firebase";
+import { Link } from "@reach/router";
 
 class SignUp extends Component {
   state = { 
@@ -54,15 +55,14 @@ class SignUp extends Component {
               inputHandler={(e) => this.setState({ checkPassword: e.target.value })} />
           </div>
           <div >
-              <input className={styles.inputImage} type="text" placeholder="URL" onInput={(e) => this.setState({ img: e.target.value })} />
-            </div>
-            <div>
+            <input className={styles.inputImage} type="text" placeholder="URL" onInput={(e) => this.setState({ img: e.target.value })} />
+          </div>
+          <div className={styles.buttonWrap}>
             <Button text="Register"/>
-            <button type="button" text={"Cancel"} onClick={this.props.toggleAddUser} className={styles.cancelBtn}>Cancel</button>
-        </div>
+            <Link to="login" className={styles.cancelLink}>Cancel</Link>
+            {/* <button type="button" text={"Cancel"} className={styles.cancelBtn}></button> */}
+          </div>
         </form>
-        
-       
       </section>
       </>
     );

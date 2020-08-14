@@ -12,11 +12,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     height: 100vh;
     width: 100vw;
     color: $white;
     background-color: $white;
+
+    h1 {
+        font-size: 60px;
+        margin-top: 25px;
+    }
 
     .inputLine {
         display: flex;
@@ -27,12 +33,7 @@
         color: $white;
         font-size: 30px;
         opacity:0.9;}
-    }
-
-    h1 {
-        font-size: 80px;
-        margin-top: 25px;
-    }
+    }   
 }
 
 .signUpForm {
@@ -44,29 +45,30 @@
     color: $white;  
 }
 
-.cancelBtn {
-    background-color: rgb(160, 160, 160);
-    color: black;
-    width: 100px;
-    height: 30px;
-    border-radius: 30px;
-    outline: none;
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 1em;
-       box-shadow:0 4px 7px rgba(0, 0, 0, 0.2), 0 4px 7px rgba(0, 0, 0, 0.27);
+.inputImage {
+    margin-top:40px;
+    margin-left: 50%;
+    height: 200px;
+    width:400px;
+    border-radius: 10px;
+    border: 4px solid $yellow;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
-        &:hover {
-            background-color: rgb(91, 89, 89);
-    }
-  }
+.buttonWrap {
+    margin-top:20%;
+    margin-right: 10%;
+    padding-right:100px;
+}
 
-  .inputImage
-  {
-      margin-top:30px;
-      height: 200px;
-      width:400px;
-      border-radius: 10px;
-      border: 4px solid $yellow;
-      background-color: rgba(0, 0, 0, 0.6);
-  }
+.cancelLink {
+     color: $yellow;
+     text-decoration: none;
+     font-size: 30px;
+
+     &:hover {
+         color: $hover;
+     }
+ }
+
+  

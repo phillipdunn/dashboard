@@ -1,0 +1,57 @@
+@import "../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.dashBoard {
+
+}
+
+.thumbWrap {
+    @include background;
+    min-height:100vh;
+    height: max-content;
+    width: 100vw;
+    color: $white;
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "weather news sport"
+    "photos tasks clothes";
+
+    .weather {
+        grid-area: weather;
+    }
+    .news {
+        grid-area: news;
+    }
+    .sport {
+        grid-area: sport;
+    }
+    .photos {
+        grid-area: photos;
+    }
+    .tasks {
+        grid-area: tasks;
+    }
+    .clothes {
+        grid-area: clothes;
+    }
+   
+}
+
+p{
+    margin-top: 80px;
+    margin-left: 40px;
+    border: 2px solid $yellow;
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}

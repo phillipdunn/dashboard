@@ -5,9 +5,9 @@ class NavBar extends Component {
   
    render() {
      return (
-       <>
-       <p>navbar working</p>
-       </>
+       <section className={styles.navBar}>
+         <button className={styles.signOut} onClick={this.props.signOut}>Sign Out</button>
+       </section>
     )
   }
 }
