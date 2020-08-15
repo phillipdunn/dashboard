@@ -4,6 +4,9 @@ import { Router, globalHistory } from "@reach/router";
 import NavBar from "../../components/NavBar";
 import Dashboard from "../../components/Dashboard"
 import PhotoPage from "../../components/PhotoPage/PhotoPage";
+import NewsPage from "../../components/NewsPage/NewsPage";
+import TaskPage from "../../components/TaskPage/TaskPage";
+import SportPage from "../../components/SportPage/SportPage";
 
 class PrivateRoutes extends Component {
 
@@ -29,6 +32,10 @@ class PrivateRoutes extends Component {
         <Router> 
           <Dashboard default path="dashboard" user={user}/>
           <PhotoPage path="photopage" user={user}/>
+          <NewsPage path="newspage" user={user}/>
+          <SportPage path="sportpage" user={user}/>
+          <TaskPage path="taskpage" user={user}/>
+          
         </Router>
       </>
     );

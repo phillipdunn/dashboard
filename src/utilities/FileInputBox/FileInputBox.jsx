@@ -1,44 +1,43 @@
 import React, { Component } from 'react';
 import styles from "./FileInputBox.module.scss";
+import { storage} from 'firebase';
 
 class FileInputBox extends Component {
+
   state = {
-    photo: '',
-    imagePreviewURL: ''
-    }
-
-  pressButton = (e) => {
-    e.preventDefault();
-    console.log('handle uploading-', this.state.file);
+    image: null,
+    setImage: null,
+    url: '',
+    setUrl: ''
   }
-
-  photoHandler = e => {
-    e.preventDefault();
-    let reader = new FileReader();
-    let file = e.target.files[0];
-
-    reader.onload = () => {
-      this.setState({
-        file:file,
-        imagePreviewURL: reader.result
-      });
-    }
-    reader.readAsDataURL(file);
-  }
-
+  
+    uploadHandler = () => {
+      const {image} =this.state;
+      const uploadTask = storage.ref(`images/${image.name}`).put(image);
+      uploadTask.on('state_changed',
+        (snapshot) => {},
+        (error) => { 
+          console.log(error)
+        },
+        () => {
+          storage
+            .ref('images')
+            .child(image.name)
+            .getDownloadURL()
+            .then(url => {
+            console.log(url);
+            });
+        }
+      );
+    }; 
+      
   render() { 
-    let {imagePreviewUrl} = this.state;
-    let imagePreview = null;
-    if (imagePreviewUrl) {
-      imagePreview = <img src={imagePreviewUrl} alt="images" />;
-    } else { }
-
+    console.log(this.state.image)
     return ( 
       <>
-      <form action="." enctype="multipart/form-data">
-      <input className={styles.fileInputBox} type='file' onChange={this.photoHandler}/>
-      </form>
-      {imagePreview}
+        <label className={styles.fileInputBox} for="file-input">      
+        <span><input id= "file-input" type="file" onChange={(e) => this.setState({ image: e.target.files[0] })} /></span>
+        </label>
       </>
      );
   }

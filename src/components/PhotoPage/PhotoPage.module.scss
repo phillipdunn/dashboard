@@ -15,8 +15,28 @@
     color: $white;
     background-color: $white;
     display: flex;
-    padding-left: 50px;
+    padding-left: 200px;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 50px;
+
+    .addPhoto {
+        background-color: $yellow;
+        color:black;
+        outline: none;
+        border-radius: 10px;
+        width: 80px;
+        height: 40px;
+        font-size: 12px;
+        font-weight: bold;
+        top:0;
+        left:0;    
+      
+        cursor: pointer;
+        box-shadow:0 4px 7px rgba(0, 0, 0, 0.2), 0 4px 7px rgba(0, 0, 0, 0.27); 
+        
+            &:hover {
+                background-color: $hover;
+            }
+    }
 }

@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.sportPage {
+    @include background;
+    min-height:100vh;
+    height: max-content;
+    width: 100vw;
+    color: $white;
+    background-color: $white;
+    display: flex;
+    padding-left: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}

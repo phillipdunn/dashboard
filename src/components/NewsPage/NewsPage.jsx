@@ -4,7 +4,7 @@ import styles from "./NewsPage.module.scss";
 class NewsPage extends Component {
   state = { 
     headline:'',
-    body''
+    body:''
    }
 
   //  componentDidMount() {
@@ -36,8 +36,8 @@ class NewsPage extends Component {
 
   render() { 
     return ( 
-      <>
-      </>
+      <section className={styles.newsPage}>
+      </section>
      );
   }
 }

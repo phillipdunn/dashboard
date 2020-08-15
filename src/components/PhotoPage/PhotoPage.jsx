@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from "./PhotoPage.module.scss";
 import FileInputBox from '../../utilities/FileInputBox/FileInputBox';
+import ThumbNail from '../Dashboard/ThumbNail/ThumbNail';
 
 
 class PhotoPage extends Component {
@@ -9,12 +10,13 @@ class PhotoPage extends Component {
     return ( 
     <>
     <section className={styles.photoPage}>
+    {/* <button className={styles.addPhoto} onClick= {this.uploadHandler}>Add Photo</button> */}
       <FileInputBox/>        
-      <FileInputBox/>        
-      <FileInputBox/>        
-      <FileInputBox/>        
-      <FileInputBox/>        
-      <FileInputBox/>        
+      <ThumbNail/>
+      <ThumbNail/>
+      <ThumbNail/>
+      <ThumbNail/>
+      <ThumbNail/>
     </section> 
     </>
     );
