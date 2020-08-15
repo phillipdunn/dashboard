@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.taskInput {
+    margin-Bottom:50px;
+    border-top: none;
+    border-left: none;
+    border-right:none;
+    border-bottom: 3px solid $white;
+    background-color: transparent;
+    color:$white;
+    width: 800px;
+    outline: none;
+    font-size: 30px; 
+    
+    ::placeholder{
+        color: $white;
+        font-size: 30px;
+        opacity:0.9;
+    }
+}
+
+::placeholder{
+    color: $white;
+    font-size: 30px;
+    opacity:0.9;
+}

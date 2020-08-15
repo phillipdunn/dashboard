@@ -15,8 +15,8 @@
     color: $white;
     background-color: $white;
     display: flex;
+    align-items: flex-end;
     padding-left: 200px;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 50px;
 }
