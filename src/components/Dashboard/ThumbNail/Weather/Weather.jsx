@@ -12,7 +12,6 @@ class Weather extends Component {
     return fetch('http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&appid=d0a10211ea3d36b0a6423a104782130e')
     .then (response => response.json())
     .then (weatherObj => 
-      // console.log(weatherObj.name))
     this.setState({
       weather: weatherObj.weather[0].main,
       temp: weatherObj.main.temp,
@@ -36,7 +35,7 @@ class Weather extends Component {
   }
 
   tempConvert = () => {
-     return Math.round(this.temp)
+     return parseInt(this.state.temp)
   }
 
   render() { 

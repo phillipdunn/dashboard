@@ -30,4 +30,23 @@
             background-color: $hover;
         }
     }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        a {
+          padding: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          text-decoration: none;
+          &:hover {
+            background-color: #ffffff40;
+            transition: 0.5s;
+            border-radius: 10px;
+          }
+          &:visited {
+            color: #ffffff40;
+          }
+        }
+      }
 }

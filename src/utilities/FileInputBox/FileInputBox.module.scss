@@ -8,6 +8,7 @@
 }
 
 .fileInputBox {
+    margin-left: 0px;
     margin-top: 80px;
     border: 2px solid $yellow;
     height: 250px;
@@ -17,7 +18,6 @@
     background-image: url('../../assets/Plus_button.png');
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-appearance: none;
 }
 
 label span input {
