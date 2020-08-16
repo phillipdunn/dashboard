@@ -31,23 +31,10 @@ class TaskPage extends Component {
    console.log(localStorage.getItem('tasks'));
  }
 
- updateTask = (task) => {
-    const newTasks =this.state.tasks.map(_task => {
-    if(task === _task)  
-    return {
-      text: task.text,
-      completed: !task.completed
-    }  
-     return _task
-    });
-    this.setState({tasks: newTasks})
-    console.log(newTasks)
- }
-
   render() { 
     return ( 
       <section className={styles.taskPage}>
-        <TaskItems tasks={this.state.tasks} updateTask={this.updateTask}/>
+        <TaskItems tasks={this.state.tasks}/>
         <TaskInputBox addTask={this.addTask}/>   
       </section>
      );

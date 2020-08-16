@@ -19,3 +19,26 @@
     outline: none;
     font-size: 25px;    
 }
+label {
+    margin-left:820px;
+    
+    .checkboxDef{
+        visibility: hidden;
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        overflow: hidden;   
+    }
+
+    .checkbox{
+        height: 30px;
+        width: 30px;
+        border: 3px solid $yellow;
+        display: inline-block;
+    }
+
+    :checked + span {
+        background: $yellow;
+      }
+}

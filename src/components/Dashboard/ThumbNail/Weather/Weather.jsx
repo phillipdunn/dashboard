@@ -49,7 +49,7 @@ class Weather extends Component {
       <section className={styles.thumbNail}>
         {this.weatherIcon()}   
         <span className={styles.temp}>{this.tempConvert()}°C</span>
-        <span className={styles.location}>{this.location}</span>
+        <span className={styles.location}>{this.state.location}</span>
       </section>    
     </>
     );
