@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styles from "./Dashboard.module.scss";
-import Weather from './ThumbNail/Weather/Weather';
-import News from './ThumbNail/News/News';
-import Sport from './ThumbNail/Sport/Sport';
-import Photos from './ThumbNail/Photos/Photos';
-import Tasks from './ThumbNail/Tasks/Tasks';
-import Clothes from './ThumbNail/Clothes/Clothes';
+import Weather from './Weather';
+import News from './News';
+import Sport from './Sport';
+import Photos from './Photos';
+import Tasks from './Tasks';
+import Clothes from './Clothes';
 
 class Dashboard extends Component {
   state = {
@@ -28,7 +28,7 @@ class Dashboard extends Component {
     const {user} = this.props; 
     if (user) {
         return (
-        <p className={styles.userName}>{user.name}</p>
+        <p className={styles.userName}>Hi {user.name}!</p>
         );
       }
   }
@@ -69,7 +69,7 @@ class Dashboard extends Component {
     return ( 
       <section className={styles.dashBoard}>
           {this.showUser()}
-          <div className={styles.thumb}><Weather title={'Weather'}/></div>
+          <div className={styles.thumb}><Weather title={'Weather'} /></div>
           <div className={styles.thumb}><News title={'News'} headline={headline} text={text}/></div>
           <div className={styles.thumb}><Sport title={'Sport'}/></div>
           <div className={styles.thumb}><Photos title={'Photos'}/></div>

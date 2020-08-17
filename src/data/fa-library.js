@@ -1,49 +1,14 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faBookOpen,
-  faExpand,
-  faPoundSign,
-  faNetworkWired,
-  faUserFriends,
-  faLock,
-  faMedkit,
-  faPlusCircle,
-  faTimes,
-  faUser,
-  faBars,
-  faArrowRight,
-  faUserEdit,
-  faUserPlus,
-  faUserSlash,
-  faTrashAlt,
-  faSearch,
-  faCheckCircle,
-  faTimesCircle,
-  faUserCircle,
-  faPlus
+import {  
+  faBowlingBall, 
+  faImages, 
+  faImage,
+  faTimesCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 export default library.add(
-  faBookOpen,
-  faPoundSign,
-  faNetworkWired,
-  faPlusCircle,
-  faTimes,
-  faUserFriends,
-  faUser,
-  faLock,
-  faMedkit,
-  faBars,
-  faArrowRight,
-  faUserEdit,
-  faUserPlus,
-  faUserSlash,
-  faTrashAlt,
-  faSearch,
-  faCheckCircle,
-  faTimesCircle,
-  faTimes,
-  faUserCircle,
-  faExpand,
-  faPlus
+  faBowlingBall,
+  faImages, 
+  faImage,
+  faTimesCircle
 );

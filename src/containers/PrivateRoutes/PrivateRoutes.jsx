@@ -10,7 +10,7 @@ import SportPage from "../../components/SportPage/SportPage";
 
 class PrivateRoutes extends Component {
   state = {
-    img: '',
+    story: '',
     headline: '',
     text: ''
   }
@@ -21,13 +21,12 @@ class PrivateRoutes extends Component {
     .then ((data) => {
       let parser = new DOMParser(),
         XMLDocument = parser.parseFromString(data, 'text/xml');
-        // XMLDocument = XMLDocument.Replace("![CDATA[","").Replace("]]","")
-        // XMLDocument.Save()
+        console.log(XMLDocument)
 
         this.setState({
-          headline : XMLDocument.getElementsByTagName('item')[0].firstElementChild.innerHTML,
-          img : XMLDocument.getElementsByTagName('item')[0].firstElementChild.nextElementSibling.nextElementSibling.nodeValue, 
-          text: XMLDocument.getElementsByTagName('item')[0].firstElementChild.nextElementSibling.innerHTML
+          headline : XMLDocument.getElementsByTagName('item')[0].firstElementChild.innerHTML.replace("<![CDATA[","").replace("]]>",""),
+          story : XMLDocument.getElementsByTagName('item')[0].firstElementChild.nextElementSibling.nextElementSibling.innerHTML, 
+          text: XMLDocument.getElementsByTagName('item')[0].firstElementChild.nextElementSibling.innerHTML.replace("<![CDATA[","").replace("]]>","")
         })
     })
     .catch(error => console.log(error))  
@@ -48,14 +47,14 @@ class PrivateRoutes extends Component {
 
   render() {
     const {user, signOut} = this.props
-    const {headline, img, text} = this.state
+    const {headline, story, text} = this.state
     return (
       <>
         <NavBar signOut={signOut}/>
         <Router> 
-          <Dashboard default path="dashboard" user={user} headline={headline} img={img} text={text}/>
+          <Dashboard default path="dashboard" user={user} headline={headline} story={story} text={text}/>
           <PhotoPage path="photopage" user={user}/>
-          <NewsPage path="newspage" user={user} headline={headline} img={img} text={text}/>
+          <NewsPage path="newspage" user={user} headline={headline} story={story} text={text}/>
           <SportPage path="sportpage" user={user}/>
           <TaskPage path="taskpage" user={user}/>   
         </Router>

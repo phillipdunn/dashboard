@@ -34,8 +34,12 @@ class TaskPage extends Component {
   render() { 
     return ( 
       <section className={styles.taskPage}>
+        <p className={styles.header}>Tasks</p>
+        <div className={styles.inputLine}> 
+          <TaskInputBox addTask={this.addTask} placeholder="Add task here..."/>   
+          </div>
         <TaskItems tasks={this.state.tasks}/>
-        <TaskInputBox addTask={this.addTask}/>   
+     
       </section>
      );
   }

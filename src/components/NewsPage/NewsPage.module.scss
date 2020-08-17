@@ -15,20 +15,30 @@
     color: $white;
     background-color: $white;
     display: flex;
-    padding-left: 200px;
+    padding-left: 100px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
 }
-
-.title{
-    margin:50px;
-    font-size: 50px;
+.header{
+    height:50px;
+    margin-top: 70px;
+    font-size: $header;
 }
 
-.img{
-    width:300px;
-    height: 300px;
+.story{
+    margin-top: 190px;
+    margin-right:50px;
+    font-size: 30px;
+    color: $yellow;
+   
+    &:hover {
+        color: $hover;
+    }
+}
+
+.title{
+    font-size: 40px;
 }
 
 .text{

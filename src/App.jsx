@@ -3,7 +3,7 @@ import './App.css';
 import { globalHistory } from '@reach/router';
 import Routes from './containers/Routes/Routes';
 import firebase from './firebase';
-import { firestore } from './firebase';
+// import { firestore } from './firebase';
 
 class App extends Component {
   state = {

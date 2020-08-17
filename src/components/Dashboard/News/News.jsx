@@ -12,8 +12,8 @@ class News extends Component {
         <p className={styles.title}>{title}</p>    
       </div>
       <section className={styles.thumbNail}>
-      <p>{headline}</p>
-      <p>{text}</p>
+      <p className={styles.head}>{headline}</p>
+      <p className={styles.text}>{text}</p>
       </section> 
       </>
       );

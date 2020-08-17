@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from "./LogIn.module.scss";
 import { Link } from "@reach/router";
-import { firestore } from "../../firebase";
+// import { firestore } from "../../firebase";
 import InputBox from "../../utilities/InputBox";
 import Button from "../../utilities/Button";
 

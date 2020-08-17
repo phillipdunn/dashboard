@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from "./NavBar.module.scss";
 import { Link } from "@reach/router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class NavBar extends Component {
   state = {
@@ -11,12 +10,14 @@ class NavBar extends Component {
   get navItems() {
     return [
       {
-        title: 'Dashboard',
-        link: '/dashboard',
-      }, {
         title: 'NewsPage',
         link: '/newspage',
-      }, {
+      }
+      ,  {
+        title: 'SportPage',
+        link: '/sportpage',
+      }
+      , {
         title: 'PhotoPage',
         link: '/photopage',
       }
@@ -25,9 +26,9 @@ class NavBar extends Component {
         link: '/taskpage',
       }
       , {
-      title: 'SportPage',
-      link: '/sportpage',
-    }
+        title: 'Dashboard',
+        link: '/dashboard',
+      }
     ]
   }
 

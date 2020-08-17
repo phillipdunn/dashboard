@@ -21,6 +21,7 @@ class SignUp extends Component {
   }
 
   createUser = (info) => {
+    console.log(this.state)
     firebase
       .auth()
       .createUserWithEmailAndPassword(info.email, info.password)
@@ -40,7 +41,7 @@ class SignUp extends Component {
         <form className={styles.signUpForm} onSubmit={this.inputHandler}>
           <div className={styles.inputLine}>
             <InputBox id="name" type="text" placeholder="Name" name="name"
-              onChange={(e) => this.setState({ name: e.target.value })} />
+              inputHandler={(e) => this.setState({ name: e.target.value })} />
           </div>
           <div className={styles.inputLine}>
             <InputBox id="email" type="email" name="email" placeholder="Email"

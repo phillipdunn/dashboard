@@ -1,4 +1,4 @@
-@import "../../../../variables.scss";
+@import "../../../variables.scss";
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
     font-family: $main-font;
 }
 
- .titleBar{
+.titleBar{
     padding: 10px;
     font-weight: bold;
     background-color: $yellow;
@@ -21,4 +21,22 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    }
+}
+
+.icon{
+    margin-top: 30px;
+    margin-right:25px;
+    margin-left: 15px;
+}
+.temp{
+    margin-top: 50px;
+    margin-left: 10px;
+    color: black;
+    font-size: 40px;;
+}
+
+.location {
+    color: black;
+    font-size: 40px;
+    margin-left:125px;
+}
