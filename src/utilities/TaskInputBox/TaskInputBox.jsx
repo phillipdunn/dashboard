@@ -26,15 +26,16 @@ export default class TaskInputBox extends Component {
   }
 
   render = () => {
-    return <form className={styles.taskInput} onSubmit={(e) => this.submitTask(e)}>>
+    return <form  onSubmit={(e) => this.submitTask(e)}>
             <ContentEditable
               innerRef={this.contentEditable}
-              html={this.state.html} // innerHTML of the editable div
-              disabled={false}       // use true to disable editing
-              onChange={this.handleChange} // handle innerHTML change
+              html={this.state.html} 
+              disabled={false}      
+              onChange={this.handleChange} 
               id="addTaskInput"
+              className={styles.taskInput}
             />
-            <button onSubmit={(e) => this.submitTask(e)}>but</button>
+            <button className={styles.button} onSubmit={(e) => this.submitTask(e)}>Add Task</button>
             </form>
   };
 };

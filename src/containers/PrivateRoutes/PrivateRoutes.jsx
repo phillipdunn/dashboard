@@ -7,12 +7,14 @@ import PhotoPage from "../../components/PhotoPage/PhotoPage";
 import NewsPage from "../../components/NewsPage/NewsPage";
 import TaskPage from "../../components/TaskPage/TaskPage";
 import SportPage from "../../components/SportPage/SportPage";
+import shortid from 'shortid';
 
 class PrivateRoutes extends Component {
   state = {
     story: '',
     headline: '',
-    text: ''
+    text: '',
+    tasks: []
   }
 
   getNews = () => {
@@ -39,24 +41,41 @@ class PrivateRoutes extends Component {
       }
     });
   }
- 
-  componentDidMount() {
+
+  componentDidMount = () => {
+    const tasks = localStorage.getItem('tasks');
+    if(tasks) {
+      const savedTasks = JSON.parse(tasks);
+      this.setState({tasks: savedTasks});
+    } else {
+      console.log('no tasks')
+    }
     this.checkAuthorization();
     this.getNews()
   }
 
+  addTask = async (task) => {
+    await this.setState({tasks:[...this.state.tasks,{
+      id: shortid.generate(),
+      text: task,
+      completed: false
+    }] });
+   localStorage.setItem('tasks',JSON.stringify(this.state.tasks))
+   console.log(localStorage.getItem('tasks'));
+ }
+
   render() {
     const {user, signOut} = this.props
-    const {headline, story, text} = this.state
+    const {headline, story, text, tasks} = this.state
     return (
       <>
         <NavBar signOut={signOut}/>
         <Router> 
-          <Dashboard default path="dashboard" user={user} headline={headline} story={story} text={text}/>
+          <Dashboard default path="dashboard" user={user} headline={headline} story={story} text={text} tasks={tasks} addTask={this.addTask}/>
           <PhotoPage path="photopage" user={user}/>
           <NewsPage path="newspage" user={user} headline={headline} story={story} text={text}/>
           <SportPage path="sportpage" user={user}/>
-          <TaskPage path="taskpage" user={user}/>   
+          <TaskPage path="taskpage" user={user} tasks={this.state.tasks} addTask={this.addTask}/>   
         </Router>
       </>
     );

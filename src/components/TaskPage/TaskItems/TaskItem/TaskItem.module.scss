@@ -15,12 +15,14 @@
     border-bottom: 3px solid $white;
     background-color: transparent;
     color:$white;
-    width: 800px;
+    width: 700px;
     outline: none;
     font-size: 25px;    
+    margin-top: 20px;
+    margin-left: 100px;
 }
 label {
-    margin-left:820px;
+    margin-left:850px;
     
     .checkboxDefault{
         visibility: hidden;

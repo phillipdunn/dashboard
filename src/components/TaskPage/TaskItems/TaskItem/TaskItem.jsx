@@ -15,9 +15,6 @@ class TaskItem extends Component {
     }
   }
 
-  // handleChange = (e) =>   {this.setState({html: e.target.value})}.bind(this);
-  // onChange={this.handleChange()}
-
   tick() {
     this.setState({
       checkBox: !this.state.checkBox
@@ -25,9 +22,6 @@ class TaskItem extends Component {
     this.state.checkBox ? this.setState({ checkedMsg: 'checked' }) : this.setState({ checkedMsg: 'unchecked' })
   }
 
-  // editContent = () => {
-  // contentEditable =  true
-  // }
   render() { 
     const {task} =this.props;
     return ( 
