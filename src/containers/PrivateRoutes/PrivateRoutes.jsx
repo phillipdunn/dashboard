@@ -23,8 +23,6 @@ class PrivateRoutes extends Component {
     .then ((data) => {
       let parser = new DOMParser(),
         XMLDocument = parser.parseFromString(data, 'text/xml');
-        console.log(XMLDocument)
-
         this.setState({
           headline : XMLDocument.getElementsByTagName('item')[0].firstElementChild.innerHTML.replace("<![CDATA[","").replace("]]>",""),
           story : XMLDocument.getElementsByTagName('item')[0].firstElementChild.nextElementSibling.nextElementSibling.innerHTML, 

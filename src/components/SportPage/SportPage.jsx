@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from "./SportPage.module.scss";
-import Papa from 'papaparse';
+// import Papa from 'papaparse';
 
 class SportPage extends Component {
   state = { 

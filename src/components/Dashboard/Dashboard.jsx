@@ -42,7 +42,7 @@ class Dashboard extends Component {
   };
 
   clothesCount = () => this.state.clothes.length;
-  jumperCount = () => this.state.clothes.filter(clothe => clothe.clothe === 'jumper').length;
+  jumperCount = () => this.state.clothes.filter(clothe => clothe.clothe === 'jumper').length; 
   hoodieCount = () => this.state.clothes.filter(clothe => clothe.clothe === 'hoodie').length;
   jacketCount = () => this.state.clothes.filter(clothe => clothe.clothe === 'jacket').length;
   sweaterCount = () => this.state.clothes.filter(clothe => clothe.clothe === 'sweater').length;
@@ -50,7 +50,7 @@ class Dashboard extends Component {
   raincoatCount = () => this.state.clothes.filter(clothe => clothe.clothe === 'raincoat').length;
 
   calculatePercent = (total, number) => (number / total) * 100;
-
+  
   UpdatePercents =  () => {
     this.setState({
       clothesCount: this.clothesCount(),
@@ -74,15 +74,16 @@ class Dashboard extends Component {
           <div className={styles.thumb}><Sport title={'Sport'}/></div>
           <div className={styles.thumb}><Photos title={'Photos'}/></div>
           <div className={styles.thumb}><Tasks title={'Tasks'} tasks={this.props.tasks} addTask={this.props.addTask}/></div>
-          <div className={styles.thumb} ><Clothes title={'Clothes'}
-                                            clothesCount={clothesCount} 
-                                            percentJumper={percentJumper} 
-                                            percenthoodie={percentHoodie} 
-                                            percentjacket={percentJacket}
-                                            percentSweater={percentSweater} 
-                                            percentBlazer={percentBlazer} 
-                                            percentRaincoat={percentRaincoat}/>
-                                          </div>
+          <div className={styles.thumb} >
+            <Clothes title={'Clothes'}
+              clothesCount={clothesCount} 
+              percentJumper={percentJumper} 
+              percenthoodie={percentHoodie} 
+              percentjacket={percentJacket}
+              percentSweater={percentSweater} 
+              percentBlazer={percentBlazer} 
+              percentRaincoat={percentRaincoat}/>
+          </div>
         </section>
     );
   }

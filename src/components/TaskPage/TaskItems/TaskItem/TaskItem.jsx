@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import styles from "./TaskItem.module.scss";
-// import ContentEditable from 'react-contenteditable'
-
 class TaskItem extends Component {
   constructor(props) {
     super(props);
