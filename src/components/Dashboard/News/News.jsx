@@ -12,6 +12,7 @@ class News extends Component {
         <p className={styles.title}>{title}</p>    
       </div>
       <section className={styles.thumbNail}>
+      <img className={styles.news} srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/002D/production/_114054000_m-nc.png" alt="news"/>
         <p className={styles.head}>{headline}</p>
         <p className={styles.text}>{text}</p>
       </section> 

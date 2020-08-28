@@ -26,11 +26,10 @@ class Weather extends Component {
 
   componentDidMount() {
     this.checkLocation();
-  //   this.getWeather(this.lat, this.lon);
   }
 
   weatherIcon = () => {
-    if (this.weather === 'Clouds') {
+    if (this.state.weather === 'Clouds') {
       return <img className={styles.icon} src={require('../../../assets/Clouds_icon.png')} alt={'cloud'}/>
     } else if (this.weather === 'Rain') {
       return <img className={styles.icon} src={require('../../../assets/Rain_icon.png')} alt={'rain'}/>

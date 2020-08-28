@@ -70,9 +70,9 @@ class Dashboard extends Component {
       <section className={styles.dashBoard}>
           <div className={styles.welcome}>{this.showUser()}</div>
           <div className={styles.thumb}><Weather title={'Weather'} /></div>
-          <div className={styles.thumb}><News title={'News'} headline={headline} text={text}/></div>
-          <div className={styles.thumb}><Sport title={'Sport'}/></div>
           <div className={styles.thumb}><Photos title={'Photos'}/></div>
+          <div className={styles.thumb}><Sport title={'Sport'}/></div>
+          <div className={styles.thumb}><News title={'News'} headline={headline} text={text}/></div>
           <div className={styles.thumb}><Tasks title={'Tasks'} tasks={this.props.tasks} addTask={this.props.addTask}/></div>
           <div className={styles.thumb} >
             <Clothes title={'Clothes'}

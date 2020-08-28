@@ -10,10 +10,10 @@
  .titleBar{
     padding: 10px;
     font-weight: bold;
-    background-color: $yellow;
+    background-color: $orange;
     height:40px;
     .title {
-        color:black;
+        color:$white;
     }
 }
 
@@ -23,12 +23,20 @@
     flex-wrap: wrap;
     }
 
+.news{
+    height:60px;
+    width:150px;
+    margin-top: 5px;
+    margin-left: 70px;
+}
 .head{
-    font-size: 20px;
+    font-size: 14px;
     margin-top: 20px;
 }
 .text{
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px;
-    text-align: left;
+    text-align: center;
+    font-weight: bold;
+    color:#778899;	
 }
