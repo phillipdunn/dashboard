@@ -5,23 +5,28 @@ class Weather extends Component {
   state = { 
     weather: '',
     temp: null,
-    location: ''
+    location: '',
    }
-
-  getWeather = () => {
-    return fetch('http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&appid=d0a10211ea3d36b0a6423a104782130e')
-    .then (response => response.json())
+   
+  checkLocation = () => {
+    navigator.geolocation.getCurrentPosition((position) =>{
+      let lat =  position.coords.latitude;
+      let lon = position.coords.longitude;
+    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=d0a10211ea3d36b0a6423a104782130e`)
+    .then (response => response.json()) 
     .then (weatherObj => 
-    this.setState({
-      weather: weatherObj.weather[0].main,
-      temp: weatherObj.main.temp,
-      location: weatherObj.name
+      this.setState({
+        weather: weatherObj.weather[0].main,
+        temp: weatherObj.main.temp,
+        location: weatherObj.name
     })) 
     .catch(error => console.log(error))  
-  }
+  })}
+  
 
   componentDidMount() {
-    this.getWeather();
+    this.checkLocation();
+  //   this.getWeather(this.lat, this.lon);
   }
 
   weatherIcon = () => {
