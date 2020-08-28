@@ -24,7 +24,26 @@
         font-size: 100px;
         margin-top: 50px;
         margin-bottom: 40px;
-        margin-right: 190px;
+        margin-right: 160px;
+        color: $orange;
+    }
+
+    .signIn {
+        font-size: 30px;
+        // margin-top: 120px;
+        margin-right: 120px;
+        margin-bottom:30px;
+        color: $white;
+    }
+
+    .google {
+        font-size: 50px;
+        margin-top:30px;
+        padding-right:120px;
+        color: #4285f4 ;
+        &:hover {
+            color:#ea4335 ;  
+        }
     }
 
     .inputLine {
@@ -39,14 +58,14 @@
         opacity:0.9;}
     }
 
-    p {
+    .newTo {
         font-size: 30px;
         margin-top: 120px;
         margin-right: 120px;
     }
 
     .signUp{
-        color: $yellow;
+        color: $orange;
         text-decoration: none;
 
         &:hover {

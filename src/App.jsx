@@ -1,8 +1,9 @@
 import React, { Component }from 'react';
 import './App.css';
 import { globalHistory } from '@reach/router';
+import library from './data/fa-library';
 import Routes from './containers/Routes/Routes';
-import firebase from './firebase';
+import firebase, { providerGoogle }  from './firebase';
 // import { firestore } from './firebase';
 
 class App extends Component {
@@ -13,6 +14,10 @@ class App extends Component {
   };
 
   componentDidMount() {
+    this.getUser();
+    }
+
+  getUser = () => {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.setState({ user });
@@ -20,6 +25,10 @@ class App extends Component {
         this.setState({ user: null });
       }
     });
+  }
+
+  signInGoogle = () => {
+    firebase.auth().signInWithRedirect(providerGoogle);
   }
 
   userSignInAttempt = event => {
@@ -64,6 +73,7 @@ class App extends Component {
     user={this.state.user}
     emailAddress={this.state.emailAddress}
     password={this.state.password}
+    signInGoogle={this.signInGoogle}
     />;
   }
 }

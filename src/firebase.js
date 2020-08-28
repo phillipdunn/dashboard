@@ -17,6 +17,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
   
 const storage = firebase.storage();
+export const providerGoogle = new firebase.auth.GoogleAuthProvider();
 
 export  {
   storage, firebase as default

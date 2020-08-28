@@ -8,7 +8,7 @@
 }
 
 .navBar {
-    background-color: $yellow;
+    background-color: $orange;
     width: 100%;
     height: 50px;
     display: flex;
@@ -25,9 +25,11 @@
         height: 30px;
         margin: 10px;
         font-weight: bold;
+        color: $orange;
 
         &:hover {
             background-color: $hover;
+            color: $white;
         }
     }
 

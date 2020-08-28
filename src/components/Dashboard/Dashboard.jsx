@@ -28,7 +28,7 @@ class Dashboard extends Component {
     const {user} = this.props; 
     if (user) {
         return (
-        <p className={styles.userName}>Hi {user.name}!</p>
+        <p className={styles.userName}>{user.displayName}'s Dashboard</p>
         );
       }
   }
@@ -68,7 +68,7 @@ class Dashboard extends Component {
     const {headline, text} = this.props
     return ( 
       <section className={styles.dashBoard}>
-          {this.showUser()}
+          <div className={styles.welcome}>{this.showUser()}</div>
           <div className={styles.thumb}><Weather title={'Weather'} /></div>
           <div className={styles.thumb}><News title={'News'} headline={headline} text={text}/></div>
           <div className={styles.thumb}><Sport title={'Sport'}/></div>

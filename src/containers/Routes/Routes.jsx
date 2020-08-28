@@ -7,7 +7,7 @@ import SignUp from "../../components/SignUp/SignUp";
 class Routes extends Component {
 
   render() {
-    const { userSignInAttempt, signOut, setEmail, setPassword, user, emailAddress, password } = this.props;
+    const { userSignInAttempt, signOut, setEmail, setPassword, user, emailAddress, password, signInGoogle } = this.props;
     return (
       <>
         <Router>
@@ -21,7 +21,7 @@ class Routes extends Component {
               userSignInAttempt={userSignInAttempt}
               emailAddress={emailAddress} setEmail={setEmail}
               password={password} setPassword={setPassword}
-              signOut={signOut}
+              signOut={signOut} signInGoogle={signInGoogle}
             />
           } 
           <SignUp path="signup"/>

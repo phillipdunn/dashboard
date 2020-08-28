@@ -60,10 +60,10 @@ class SignUp extends Component {
           </div>
           <div className={styles.buttonWrap}>
             <Button text="Register"/>
-            <Link to="login" className={styles.cancelLink}>Cancel</Link>
-            {/* <button type="button" text={"Cancel"} className={styles.cancelBtn}></button> */}
           </div>
-        </form>
+          </form>
+          <Link to="login" className={styles.cancelLink}>Cancel</Link>
+        
       </section>
       </>
     );

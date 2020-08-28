@@ -22,12 +22,15 @@
     h1 {
         font-size: 60px;
         margin-top: 25px;
+        color:$orange;
     }
 
     .inputLine {
         display: flex;
         flex-direction: row;
         background-color: transparent;
+        margin-left: 100px;
+        margin-top:90px;
        
         ::placeholder{
         color: $white;
@@ -46,25 +49,26 @@
 }
 
 .inputImage {
-    margin-left: 80%;
+    margin-top:50px;
+    margin-right: 70px;
     height: 200px;
-    width:400px;
+    width:350px;
     border-radius: 10px;
-    border: 4px solid $yellow;
-    background-color: rgba(0, 0, 0, 0.6);
+    border: 4px solid $orange;
+    background-color: transparent;
 }
 
 .buttonWrap {
-    margin-top:18%;
-    margin-right: 15%;
-    padding-right:100px;
+    margin-top:30px;
+    margin-left: 190px;
+
 }
 
 .cancelLink {
-     color: $yellow;
+     color: $orange;
      text-decoration: none;
      font-size: 30px;
-     margin-left: 20px;
+     margin-left: 490px;
 
      &:hover {
          color: $hover;

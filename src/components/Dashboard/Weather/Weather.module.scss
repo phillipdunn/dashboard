@@ -10,10 +10,10 @@
 .titleBar{
     padding: 10px;
     font-weight: bold;
-    background-color: $yellow;
+    background-color: $orange;
     height:40px;
     .title {
-        color:black;
+        color:$white;
     }
 }
 
@@ -31,12 +31,12 @@
 .temp{
     margin-top: 50px;
     margin-left: 10px;
-    color: black;
+    color: $white;
     font-size: 40px;;
 }
 
 .location {
-    color: black;
+    color: $white;
     font-size: 40px;
     margin-left:125px;
 }

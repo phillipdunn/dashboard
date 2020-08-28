@@ -7,6 +7,16 @@
     font-family: $main-font;
 }
 
+.welcome{
+    margin-top: 80px;
+    margin-right: 900px;
+}
+
+.userName{
+    height:50px;
+    font-size: $header;
+}
+
 .dashBoard{
     @include background;
     min-height:100vh;
@@ -23,16 +33,10 @@
     }
 
 .thumb {
-    margin-top: 80px;
     margin-Right: 100px;
-    border: 4px solid $yellow;
+    border: 4px solid $orange;
     height: 250px;
     width: 300px;
     border-radius: 10px;
     text-align: center;
-}
-
-.userName{
-    height:50px;
-    font-size: $header;
 }
