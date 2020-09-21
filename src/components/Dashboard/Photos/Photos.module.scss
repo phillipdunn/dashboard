@@ -1,18 +1,18 @@
 @import "../../../variables.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $main-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
 }
 
- .titleBar{
-    padding: 10px;
-    font-weight: bold;
-    background-color: $yellow;
-    height:40px;
-    .title {
-        color:black;
-    }
+.titleBar {
+  padding: 10px;
+  font-weight: bold;
+  background-color: $orange;
+  height: 40px;
+  .title {
+    color: black;
+  }
 }
