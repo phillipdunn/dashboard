@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,WAAW,ECLD,aAAa,EAAE,qBAAqB,EAAE,eAAe,EAAE,qBAAqB,EAAE,MAAM,EAAE,OAAO,EAAE,UAAU;CDMpH;;AAED,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,IAAI;EACjB,gBAAgB,ECPV,OAAiB;EDQvB,MAAM,EAAE,IAAI;CAIb;;AARD,AAKE,SALO,CAKP,MAAM,CAAC;EACL,KAAK,ECTD,OAAO;CDUZ",
+    "sources": [
+        "Clothes.module.scss",
+        "../../../variables.scss"
+    ],
+    "names": [],
+    "file": "Clothes.module.css"
+}

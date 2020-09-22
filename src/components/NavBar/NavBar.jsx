@@ -9,22 +9,22 @@ class NavBar extends Component {
 
   get navItems() {
     return [
-      {
-        title: "NewsPage",
-        link: "/newspage",
-      },
-      {
-        title: "PhotoPage",
-        link: "/photopage",
-      },
-      {
-        title: "TaskPage",
-        link: "/taskpage",
-      },
-      {
-        title: "SportPage",
-        link: "/sportpage",
-      },
+      // {
+      //   title: "NewsPage",
+      //   link: "/newspage",
+      // },
+      // {
+      //   title: "PhotoPage",
+      //   link: "/photopage",
+      // },
+      // {
+      //   title: "TaskPage",
+      //   link: "/taskpage",
+      // },
+      // {
+      //   title: "SportPage",
+      //   link: "/sportpage",
+      // },
       {
         title: "Dashboard",
         link: "/dashboard",

@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.titleBar {
+  padding: 10px;
+  font-weight: bold;
+  background-color: #ee8f4f;
+  height: 40px;
+}
+
+.titleBar .title {
+  color: #F7F6F6;
+}
+
+.thumbNail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.icon {
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-left: 15px;
+}
+
+.temp {
+  margin-top: 50px;
+  margin-left: 10px;
+  color: #F7F6F6;
+  font-size: 30px;
+}
+
+.location {
+  color: #F7F6F6;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 55px;
+}
+/*# sourceMappingURL=Weather.module.css.map */

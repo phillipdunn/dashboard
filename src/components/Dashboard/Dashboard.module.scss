@@ -1,42 +1,44 @@
 @import "../../variables.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $main-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
 }
 
-.welcome{
-    margin-top: 80px;
-    margin-right: 900px;
+.welcome {
+  margin-top: 80px;
+  margin-right: 900px;
 }
 
-.userName{
-    height:50px;
-    font-size: $header;
+.userName {
+  height: 50px;
+  font-size: $header;
 }
 
-.dashBoard{
-    @include background;
-    min-height:100vh;
-    height: max-content;
-    width: 100vw;
-    color: $white;
-    background-color: $white;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    flex-wrap: wrap;
-    gap:50px;
-    }
+.dashBoard {
+  @include background;
+  min-height: 100vh;
+  height: max-content;
+  width: 100vw;
+  color: $white;
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
 
 .thumb {
-    margin-Right: 100px;
-    border: 4px solid $orange;
-    height: 250px;
-    width: 300px;
-    border-radius: 10px;
-    text-align: center;
+  margin-right: 100px;
+  border: 4px solid $orange;
+  height: 250px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
 }

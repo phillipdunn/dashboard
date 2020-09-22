@@ -6,14 +6,15 @@ import Sport from "./Sport";
 import Photos from "./Photos";
 import Tasks from "./Tasks";
 import Clothes from "./Clothes";
+import { Link } from "@reach/router";
 
 class Dashboard extends Component {
   state = {
     weather: "",
     temp: null,
     location: "",
-    lat: 52.9772,
-    lon: 1.8918,
+    lat: 51.5074,
+    lon: 0.1278,
   };
 
   showUser = () => {
@@ -64,22 +65,22 @@ class Dashboard extends Component {
             weather={this.state.weather}
           />
         </div>
-        <div className={styles.thumb}>
+        <Link to={"/photopage"} className={styles.thumb}>
           <Photos title={"Photos"} />
-        </div>
-        <div className={styles.thumb}>
+        </Link>
+        <Link to={"/sportpage"} className={styles.thumb}>
           <Sport title={"Sport"} />
-        </div>
-        <div className={styles.thumb}>
+        </Link>
+        <Link to={"/newspage"} className={styles.thumb}>
           <News title={"News"} headline={headline} text={text} />
-        </div>
-        <div className={styles.thumb}>
+        </Link>
+        <Link to={"/taskpage"} className={styles.thumb}>
           <Tasks
             title={"Tasks"}
             tasks={this.props.tasks}
             addTask={this.props.addTask}
           />
-        </div>
+        </Link>
         <div className={styles.thumb}>
           <Clothes title={"Map"} lat={this.state.lat} lon={this.state.lon} />
         </div>

@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.welcome {
+  margin-top: 80px;
+  margin-right: 900px;
+}
+
+.userName {
+  height: 50px;
+  font-size: 40px;
+}
+
+.dashBoard {
+  background-color: white;
+  background-image: url("./assets/Background.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100vw;
+  color: #F7F6F6;
+  background-color: #F7F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
+}
+
+.thumb {
+  margin-right: 100px;
+  border: 4px solid #ee8f4f;
+  height: 250px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #F7F6F6;
+}
+/*# sourceMappingURL=Dashboard.module.css.map */

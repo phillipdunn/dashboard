@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.taskItem {
+  padding: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #F7F6F6;
+  background-color: transparent;
+  color: #F7F6F6;
+  width: 700px;
+  outline: none;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+label {
+  margin-left: 850px;
+}
+
+label .checkboxDefault {
+  visibility: hidden;
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+label .checkbox {
+  height: 30px;
+  width: 30px;
+  border: 3px solid #f5e554;
+  display: inline-block;
+}
+
+label :checked + span {
+  background: #f5e554;
+}
+/*# sourceMappingURL=TaskItem.module.css.map */

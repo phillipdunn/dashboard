@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.logInPage {
+  background-color: white;
+  background-image: url("./assets/Background.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  color: #F7F6F6;
+  background-color: #F7F6F6;
+}
+
+.logInPage h1 {
+  font-size: 100px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-right: 160px;
+  color: #ee8f4f;
+}
+
+.logInPage .signIn {
+  font-size: 30px;
+  margin-right: 120px;
+  margin-bottom: 30px;
+  color: #F7F6F6;
+}
+
+.logInPage .google {
+  font-size: 50px;
+  margin-top: 30px;
+  padding-right: 123px;
+  color: white;
+}
+
+.logInPage .google:hover {
+  color: #ea4335;
+}
+
+.logInPage .inputLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: transparent;
+  margin-right: 150px;
+}
+
+.logInPage .inputLine ::-webkit-input-placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.logInPage .inputLine :-ms-input-placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.logInPage .inputLine ::-ms-input-placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.logInPage .inputLine ::placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.logInPage .newTo {
+  font-size: 30px;
+  margin-top: 120px;
+  margin-right: 120px;
+}
+
+.logInPage .signUp {
+  color: #ee8f4f;
+  text-decoration: none;
+}
+
+.logInPage .signUp:hover {
+  color: #5b5959;
+}
+
+.logInForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F7F6F6;
+}
+
+.buttonWrap {
+  margin-top: 50px;
+  margin-left: 550px;
+  padding-right: 700px;
+}
+/*# sourceMappingURL=LogIn.module.css.map */

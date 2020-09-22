@@ -1,54 +1,54 @@
 @import "../../variables.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $main-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
 }
 
 .navBar {
-    background-color: $orange;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    box-shadow: 0 3px 3px #222222e6, 0 1px 1px #222222e6; ;
-    z-index: 8;
-    overflow: hidden;
-    position: fixed;
+  background-color: $orange;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 3px #222222e6, 0 1px 1px #222222e6;
+  z-index: 8;
+  overflow: hidden;
+  position: fixed;
 
-    .signOut{
-        border-radius: 10px;
-        width: 80px;
-        height: 30px;
-        margin: 10px;
-        font-weight: bold;
-        color: $orange;
+  .signOut {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    font-weight: bold;
+    color: $orange;
 
-        &:hover {
-            background-color: $hover;
-            color: $white;
-        }
+    &:hover {
+      background-color: $hover;
+      color: $white;
     }
+  }
 
-    .menu {
-        display: flex;
-        align-items: center;
-        a {
-          padding: 10px;
-          margin-left: 10px;
-          margin-right: 10px;
-          text-decoration: none;
-          &:hover {
-            background-color: #ffffff40;
-            transition: 0.5s;
-            border-radius: 10px;
-          }
-          &:visited {
-            color: #ffffff40;
-          }
-        }
+  .menu {
+    display: flex;
+    align-items: center;
+    a {
+      padding: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      text-decoration: none;
+      &:hover {
+        background-color: #ffffff40;
+        transition: 0.5s;
+        border-radius: 10px;
       }
+      &:visited {
+        color: #ffffff40;
+      }
+    }
+  }
 }

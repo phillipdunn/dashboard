@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,WAAW,ECLH,aAAa,EAAE,qBAAqB,EAAE,eAAe,EAAE,qBAAqB,EAAE,MAAM,EAAE,OAAO,EAAE,UAAU;CDMpH;;AAED,AAAA,SAAS,CAAC;EACN,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "TaskItems.module.scss",
+        "../../../variables.scss"
+    ],
+    "names": [],
+    "file": "TaskItems.module.css"
+}

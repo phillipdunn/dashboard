@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.taskInput {
+  margin-top: 200px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #F7F6F6;
+  background-color: transparent;
+  color: #F7F6F6;
+  width: 700px;
+  outline: none;
+  font-size: 30px;
+}
+
+.taskInput ::-webkit-input-placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.taskInput :-ms-input-placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.taskInput ::-ms-input-placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.taskInput ::placeholder {
+  color: #F7F6F6;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.button {
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  font-weight: bold;
+  margin-left: 750px;
+}
+
+.button:hover {
+  background-color: #5b5959;
+}
+/*# sourceMappingURL=TaskInputBox.module.css.map */

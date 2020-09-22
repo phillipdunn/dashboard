@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,WAAW,ECLH,aAAa,EAAE,qBAAqB,EAAE,eAAe,EAAE,qBAAqB,EAAE,MAAM,EAAE,OAAO,EAAE,UAAU;CDMpH;;AAED,AAAA,UAAU,CAAC;EACP,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,GAAG,CAAC,KAAK,CCPZ,OAAiB;EDQtB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "ThumbNail.module.scss",
+        "../../../variables.scss"
+    ],
+    "names": [],
+    "file": "ThumbNail.module.css"
+}
