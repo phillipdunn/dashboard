@@ -1,19 +1,25 @@
-
-$main-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+$main-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
 $yellow: rgb(245, 229, 84);
-$orange:rgb(238, 143, 79);
-$white: #F7F6F6;
-$hover:rgb(91, 89, 89);
+$orange: #ed872d;
+$white: #f7f6f6;
+$blue: #0fc0ff;
+$pink: rgb(235, 51, 225);
+$hover: rgb(91, 89, 89);
+
 $header: 40px;
+$border: 10px;
 
-  @mixin background {
-    background-color: white;
-    background-image: url("./assets/Background.png");
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+$card-shadowing: 0 4px 7px rgba(0, 0, 0, 0.2), 0 4px 7px rgba(0, 0, 0, 0.27);
+$card-hover-shadowing: 0 14px 28px rgba(0, 0, 0, 0.27),
+  0 10px 10px rgba(0, 0, 0, 0.3);
 
+@mixin background {
+  background-color: white;
+  background-image: url("./assets/dash-backgrd.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

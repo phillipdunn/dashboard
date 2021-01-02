@@ -1,11 +1,8 @@
 import React, { Component }from 'react';
 import './App.css';
 import { globalHistory } from '@reach/router';
-import library from './data/fa-library';
 import Routes from './containers/Routes/Routes';
 import firebase, { providerGoogle }  from './firebase';
-// import { firestore } from './firebase';
-
 class App extends Component {
   state = {
     user: null,

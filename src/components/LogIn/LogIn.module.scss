@@ -5,53 +5,51 @@
   padding: 0;
   box-sizing: border-box;
   font-family: $main-font;
+  height: 100%;
 }
 
 .logInPage {
   @include background;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: wrap;
   align-items: center;
-  min-height: 100vh;
-  height: max-content;
-  width: 100%;
   color: $white;
-  background-color: $white;
 
   h1 {
-    font-size: 100px;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    margin-right: 160px;
+    font-size: 3em;
     color: $orange;
+    margin-top: 1em;
   }
 
-  .signIn {
-    font-size: 30px;
-    // margin-top: 120px;
-    margin-right: 120px;
-    margin-bottom: 30px;
-    color: $white;
+  .loginBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 35em;
+    width: 21em;
+    margin-bottom: 2em;
+    margin-top: 2em;
   }
 
-  .google {
-    font-size: 50px;
-    margin-top: 30px;
-    padding-right: 123px;
-    color: white;
+  .logInForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .googleBtnWrap {
+    margin-bottom: 1em;
     &:hover {
-      color: #ea4335;
+      color: $hover;
     }
   }
 
   .inputLine {
-    display: flex;
-    flex-direction: row;
     background-color: transparent;
-    margin-right: 150px;
-
     ::placeholder {
       color: $white;
       font-size: 30px;
@@ -61,31 +59,13 @@
 
   .newTo {
     font-size: 30px;
-    margin-top: 120px;
-    margin-right: 120px;
+    text-align: center;
   }
-
   .signUp {
     color: $orange;
     text-decoration: none;
-
     &:hover {
       color: $hover;
     }
   }
-}
-
-.logInForm {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-}
-
-.buttonWrap {
-  margin-top: 50px;
-  margin-left: 550px;
-  padding-right: 700px;
 }
