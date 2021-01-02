@@ -16,15 +16,18 @@ class Routes extends Component {
               user={user} 
               signOut={signOut} 
               default path="/"/>
-            : <LogIn default path="login"
+            : <>
+            <LogIn default path="login"
               user={user}
               userSignInAttempt={userSignInAttempt}
               emailAddress={emailAddress} setEmail={setEmail}
               password={password} setPassword={setPassword}
               signOut={signOut} signInGoogle={signInGoogle}
             />
+             <SignUp path="signup" user={user}/>
+            </>
           } 
-          <SignUp path="signup"/>
+         
         </Router>
       </>
     );

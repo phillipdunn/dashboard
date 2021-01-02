@@ -30,7 +30,7 @@ class LogIn extends Component {
               <Button text="Login"/>
             </div>
           </form>
-          <Link to="signup" className={styles.signUp}> Sign up</Link>
+          <Link to="/signup" className={styles.signUp}> Sign up</Link>
         </section>
       </section>
       </>

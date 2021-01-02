@@ -4,6 +4,7 @@ import Button from "../../utilities/Button";
 import InputBox from "../../utilities/InputBox";
 import firebase from "../../firebase";
 import { Link } from "@reach/router";
+// import {storage} from "../../firebase";
 
 class SignUp extends Component {
   state = { 
@@ -12,7 +13,7 @@ class SignUp extends Component {
     email: '',
     password: '', 
     checkPassword: '',
-    img: ''
+    img: null
    }
 
    inputHandler = (event) => {
@@ -20,8 +21,14 @@ class SignUp extends Component {
     this.createUser(this.state)
   }
 
+  // uploadPicture = (img) => {
+  //   let file = img
+  //   let storageRef = storage.ref();
+  //   ref.put(file).then(function(snapshot){console.log('uploaded')});
+  // }
+
   createUser = (info) => {
-    console.log(this.state)
+    
     firebase
       .auth()
       .createUserWithEmailAndPassword(info.email, info.password)
@@ -31,9 +38,12 @@ class SignUp extends Component {
       .catch((error) => {
         console.log(error)
       })
+      .then(this.uploadPicture(this.state.img))
+
   }
 
   render() { 
+    console.log(this.props.user)
     return (
       <>
       <section className={styles.signUpPage}>
@@ -53,17 +63,20 @@ class SignUp extends Component {
                 inputHandler={(e) => this.setState({ password: e.target.value })} />
             </div>
             <div className={styles.inputLine}>
-              <InputBox id="password" type="password" name="password" placeholder="Confirm Password"
+              <InputBox id="reEnterPassword" type="password" name="password" placeholder="Confirm Password"
                 inputHandler={(e) => this.setState({ checkPassword: e.target.value })} />
             </div>
-            <div >
-              <input className={styles.inputImage} type="text" placeholder="URL" onInput={(e) => this.setState({ img: e.target.value })} />
+            <div className={styles.inputLine}>
+             <label className={styles.inputImageLabel}>Add a profile pic:</label>
             </div>
+            <section className={styles.inputImage}>
+              <input type="file" multiple="" onInput={(e) => this.setState({ img: e.target.value })} />
+            </section>
             <div>
               <Button text="Register"/>
             </div>
             </form>
-            <Link to="login" className={styles.cancelLink}>Cancel</Link>
+            <Link to="/login" className={styles.cancelLink}>Cancel</Link>
           </section>
         </section>
       </>

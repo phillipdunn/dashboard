@@ -1,5 +1,4 @@
 import React, { Component }from 'react';
-import './App.css';
 import { globalHistory } from '@reach/router';
 import Routes from './containers/Routes/Routes';
 import firebase, { providerGoogle }  from './firebase';

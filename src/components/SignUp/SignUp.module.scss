@@ -51,7 +51,6 @@
   }
 
   .inputImage {
-    margin-top: 1em;
     height: 15em;
     width: 15em;
     border-radius: $border;
@@ -59,11 +58,17 @@
     background-color: transparent;
   }
 
+  .inputImageLabel {
+    margin-left: -2.5em;
+    color: $white;
+    font-size: 30px;
+  }
+
   .cancelLink {
     color: $orange;
     text-decoration: none;
     font-size: 1.5em;
-    padding-top: 5em;
+    padding-top: 8em;
     padding-bottom: 1em;
 
     &:hover {
