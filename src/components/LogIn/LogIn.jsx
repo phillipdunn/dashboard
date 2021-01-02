@@ -13,7 +13,7 @@ class LogIn extends Component {
       <>
       <section className={styles.logInPage}> 
         <section className={styles.loginBox}>
-        <h1>My Dashboard</h1>
+          <h1>My Dashboard</h1>
           <div className={styles.googleBtnWrap} >
            <GoogleButton onClick={signInGoogle}/>
           </div>
@@ -26,11 +26,11 @@ class LogIn extends Component {
               <InputBox id="password" type="password" name="password" placeholder="Password"
                 inputHandler={setPassword} autoComplete={"current-password"} />
             </div>
-            <Button text="Login"/>
+            <div>
+              <Button text="Login"/>
+            </div>
           </form>
-          <section className={styles.register}>
-            <p className={styles.newTo}>New to dashboards?<Link to="signup" className={styles.signUp}> Sign up</Link></p>
-          </section>
+          <Link to="signup" className={styles.signUp}> Sign up</Link>
         </section>
       </section>
       </>

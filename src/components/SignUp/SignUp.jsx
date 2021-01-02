@@ -35,36 +35,37 @@ class SignUp extends Component {
 
   render() { 
     return (
-        <>
+      <>
       <section className={styles.signUpPage}>
-        <h1>Sign Up</h1>
-        <form className={styles.signUpForm} onSubmit={this.inputHandler}>
-          <div className={styles.inputLine}>
-            <InputBox id="name" type="text" placeholder="Name" name="name"
-              inputHandler={(e) => this.setState({ name: e.target.value })} />
-          </div>
-          <div className={styles.inputLine}>
-            <InputBox id="email" type="email" name="email" placeholder="Email"
-              inputHandler={(e) => this.setState({ email: e.target.value })} />
-          </div>
-          <div className={styles.inputLine}>
-            <InputBox id="password" type="password" name="password" placeholder="Password"
-              inputHandler={(e) => this.setState({ password: e.target.value })} />
-          </div>
-          <div className={styles.inputLine}>
-            <InputBox id="password" type="password" name="password" placeholder="Confirm Password"
-              inputHandler={(e) => this.setState({ checkPassword: e.target.value })} />
-          </div>
-          <div >
-            <input className={styles.inputImage} type="text" placeholder="URL" onInput={(e) => this.setState({ img: e.target.value })} />
-          </div>
-          <div className={styles.buttonWrap}>
-            <Button text="Register"/>
-          </div>
-          </form>
-          <Link to="login" className={styles.cancelLink}>Cancel</Link>
-        
-      </section>
+        <section className={styles.signUpBox}>
+          <h1>Sign Up</h1>
+          <form className={styles.signUpForm} onSubmit={this.inputHandler}>
+            <div className={styles.inputLine}>
+              <InputBox id="name" type="text" placeholder="Name" name="name"
+                inputHandler={(e) => this.setState({ name: e.target.value })} />
+            </div>
+            <div className={styles.inputLine}>
+              <InputBox id="email" type="email" name="email" placeholder="Email"
+                inputHandler={(e) => this.setState({ email: e.target.value })} />
+            </div>
+            <div className={styles.inputLine}>
+              <InputBox id="password" type="password" name="password" placeholder="Password"
+                inputHandler={(e) => this.setState({ password: e.target.value })} />
+            </div>
+            <div className={styles.inputLine}>
+              <InputBox id="password" type="password" name="password" placeholder="Confirm Password"
+                inputHandler={(e) => this.setState({ checkPassword: e.target.value })} />
+            </div>
+            <div >
+              <input className={styles.inputImage} type="text" placeholder="URL" onInput={(e) => this.setState({ img: e.target.value })} />
+            </div>
+            <div>
+              <Button text="Register"/>
+            </div>
+            </form>
+            <Link to="login" className={styles.cancelLink}>Cancel</Link>
+          </section>
+        </section>
       </>
     );
   }
